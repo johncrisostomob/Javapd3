@@ -14,8 +14,8 @@ class Main {
     
 */
 int c = 5;    
-int b = 6;
-int sum = c + b;
+int d = 6;
+int sum = c + d;
 System.out.println(sum);
 
 /*  
@@ -28,8 +28,8 @@ System.out.println(sum);
 double grade1 = 75;
 double grade2 = 90;
 double grade3 = 100;
-int sum = grade1 + grade2 + grade3;
-System.out.println(sum);
+double sum1 = grade1 + grade2 + grade3;
+System.out.println(sum1);
 
 
 /*  
@@ -49,8 +49,8 @@ System.out.println(avg);
     Declare and assign values to any new variables
 
 */
-int x = 2;
-int A = 3;
+double x = 2;
+double A = 3;
 double y = A / (x + 1); 
 System.out.println(y);
 
@@ -61,9 +61,9 @@ System.out.println(y);
     Declare and assign values to any new variables
 
 */
-int x1 = 2;
-int A1 = 3;
-double y1 = (2 * x1(x1 + 1)(x1 / -2)) / A1;
+double x1 = 2;
+double A1 = 3;
+double y1 = (2 * x1*(x1 + 1)*(x1 / -2.0)) / A1;
 System.out.println(y1);
 
 
