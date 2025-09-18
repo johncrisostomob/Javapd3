@@ -13,7 +13,7 @@ class Main {
     calculated sum and then display it.
     
 */
-int c = 5;    
+int c = 9;    
 int d = 6;
 int sum = c + d;
 System.out.println(sum);
