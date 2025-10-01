@@ -1,0 +1,41 @@
+
+-
+     
+Challenge 1:
+
+Write a function "print" which takes in a string and displays it to the console. Test the function to make sure it works.
+
+
+Challenge 2:
+
+Write a function "FtoC" that converts temperature in degrees Fahrenheit to Celsius. The function will take in temperature in Fahrenheit and return the temperature in Celcius. 
+Google the formula.
+
+
+   
+
+Challenge 3:
+
+Write a function "sphereVolume" that calculate the volume of a sphere. The function will take in the radius and return the volume of a sphere.
+Google the formula.
+
+
+   
+
+Challenge 4:
+
+Write a function "coneVolume" that calculate the volume of a cone. The function will take in the radius and a height and return the volume of a cone.
+Google the formula.
+
+
+   
+
+
+Challenge 5:
+
+Write a function "distance" that calculate the distance between two points (x1,y1) and (x2,y2). The function will need to take paramaters that represents two points.
+Google the formula.
+
+
+
+   
