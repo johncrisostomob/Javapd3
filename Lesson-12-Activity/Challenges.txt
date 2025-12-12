@@ -1,0 +1,34 @@
+
+
+Challenge 1:
+Write a function creditCardType that accepts the a credit card number (as a string) and returns back the type of credit card that is determined by the starting numbers:
+Starts with:
+4 - Visa
+34 or 37 - America Express
+36 - Diner Club
+51 or 55 - Mastercard
+6011 or 65 - Discovery
+
+Challenge 2:
+Write a function pigLatin which accepts a word and return a new word made up by switch the fist letter to the end of the word and adding a "ay" after. Example: "pig"==> "igpay" Challenge 2:
+
+Challenge 3:
+
+Write a function nycLocate that accepts a zip code (as a string) and returns where in NYC the zip code is by examing the first three numbers of the zip code:
+
+Manhattan starting with :100,101, 102
+Staten Island  : 103
+Bronx : 104
+Brooklyn : 112
+Queens : 113, 114, 111
+
+
+Challenge 4:
+Create a function getMonth that accepts a date in the form MM/DD/YYYY and returns the month: Example 07/21/2023 ==> "July"
+
+Challenge 5:
+
+Create a function validatePswd that accepts a password. The password must have 5 to 8 characters that are letters, numbers or any symbol except ^, *, (, ) 
+
+Return true if it's valid, otherwise return false.
+
