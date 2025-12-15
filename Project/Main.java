@@ -27,32 +27,29 @@ class Main {
     sub[16] = 'x';
     sub[17] = 'z';
 
-
     char[] sub2 = new char[18];
     sub2[0] = 'α';  
-    sub2[1] = 'β';    
+    sub2[1] = 'β';  
     sub2[2] = 'δ';  
-    sub2[3] = 'ε';
+    sub2[3] = 'ε';  
     sub2[4] = 'γ';
-    sub2[5] = 'ι';
-    sub2[6] = 'κ';
-    sub2[7] = 'λ';
-    sub2[8] = 'μ';
-    sub2[9] = 'ν';
-    sub2[10] = 'ο';
-    sub2[11] = 'π';
-    sub2[12] = 'ρ';
+    sub2[5] = 'ι'; 
+    sub2[6] = 'κ'; 
+    sub2[7] = 'λ'; 
+    sub2[8] = 'μ'; 
+    sub2[9] = 'ν'; 
+    sub2[10] = 'ο'; 
+    sub2[11] = 'π'; 
+    sub2[12] = 'ρ'; 
     sub2[13] = 'σ';
     sub2[14] = 'τ';
     sub2[15] = 'υ';
     sub2[16] = 'ξ';
     sub2[17] = 'ζ';
 
-    
     // Encoding message
     String file = Input.readFile("Original.txt");
 
-    //substituion
     String encodedMsg1 = subEncryption(file,sub,sub2);
     Input.writeFile("Encode1.txt",encodedMsg1);
 
@@ -62,22 +59,20 @@ class Main {
     String encodedMsg3 = reverse(encodedMsg2);
     Input.writeFile("Encode3.txt",encodedMsg3);
 
-    
-    // decoding message
-    String file2 = Input.readFile("Encode1.txt");
-    
+    // Decoding message
+    String file2 = Input.readFile("Encode3.txt");
+
     String decodedMsg1 = reverse(file2);
     Input.writeFile("Decode1.txt", decodedMsg1);
-    
+
     String decodedMsg2 = decode(decodedMsg1);
     Input.writeFile("Decode2.txt", decodedMsg2);
-    
+
     String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
-    Input.writeFile("Decode1.txt", decodedMsg3);
-    
-    
+    Input.writeFile("Decode3.txt", decodedMsg3);
+
   }
-  // Level 1 reverse string
+  // Reverse
   String reverse(String txt){
     String bld ="";
     for(int x=0; x<= txt.length()-1; x++){
@@ -85,31 +80,31 @@ class Main {
     }
     return bld;
   }
-  
-  
-  //Level 2 Cipher encoding with no wrapping
-  String encode(String txt){
-    String bld="";
-    int ascii;
-    char ch='\0';
-    for(int x=0; x<=txt.length()-1; x++){
-      ch=txt.charAt(x);
-      ascii=(int)ch;
 
-      if(ascii == 176){
-        ascii = 75;
+
+  //Ceaser Cipher shift by 3
+  String encode(String txt){
+        String bld="";
+        int ascii;
+        char ch='\0';
+        for(int x=0; x<=txt.length()-1;x++){
+          ch=txt.charAt(x);
+          ascii=(int)ch;
+
+          if(ascii == 176){
+            ascii = 75;
+          }
+          else if( ascii == 254){
+            ascii = 188;
+          }
+          else{
+            ascii+=3;
+          }
+          bld+= (char)ascii;
+        }
+
+        return bld;
       }
-      else if( ascii == 254){
-        ascii = 188;
-      }
-      else{
-        ascii+=3;
-      }
-      bld += (char)ascii;
-    }
-     
-    return bld;
-  }
 
 
   String decode(String txt){
@@ -129,13 +124,13 @@ class Main {
       else{
         ascii-=3;
       }
-      bld += (char)ascii;
+      bld+= (char)ascii;
     }
-   
+
     return bld;
   }
 
-  // Level 3 Substituion encoding
+  // Substituion 
   String subEncryption(String s, char[] sub, char[] sub2){
     String bld="";
     char ch ='\0';
@@ -150,7 +145,6 @@ class Main {
         bld+=ch;
       }
     }
-   
     return bld;
   }
 
@@ -166,5 +160,4 @@ class Main {
     int range = upper - lower;
     return (int)(Math.random()*range+lower);
   }
-
 }
