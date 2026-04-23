@@ -40,6 +40,9 @@ class Main {
     
     server.createContext("/", new RouteHandler("You are connected, but route not given or incorrect....") );
 
+    String sql = "";
+	  sql  = "SELECT tracks.Name, albums.Title, tracks.Composer FROM (((genres INNER JOIN tracks ON genres.GenreID=tracks.GenreID) INNER JOIN albums ON tracks.AlbumId=albums.AlbumId) INNER JOIN artists ON albums.ArtistId=artists.ArtistId)";
+    server.createContext("/songs", new RouteHandler(db,sql) );
   
     //Start the server
     server.start();
