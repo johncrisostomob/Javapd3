@@ -3,7 +3,7 @@ let data,songs;
 function init(){
   $.ajaxSetup({async: false});
   
-  let link= "http://localhost:8500"
+  let link= "http://127.0.0.1:8500"
   let route= "/songs";
   let songs = $.getJSON(link+route).responseJSON;
   
