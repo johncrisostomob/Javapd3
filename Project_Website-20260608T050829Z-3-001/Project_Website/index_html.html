@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Database Explorer - Home</title>
+    <link rel="stylesheet" href="styles_css.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎮 GameDB Explorer</div>
+            <div class="nav-links">
+                <a href="index_html.html" class="nav-link active">Home</a>
+                <a href="genre_html.html" class="nav-link">Browse by Genre</a>
+                <a href="platform_html.html" class="nav-link">Browse by Platform</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page Content -->
+    <div class="page">
+        <div class="hero">
+            <h1>🗄️ Games Database Explorer</h1>
+            <p>Discover, explore, and analyze an extensive collection of games across multiple genres and platforms. Dive deep into our comprehensive database of 50 carefully curated games.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Genre Filtering</h3>
+                <p>Explore games by their genres including RPG, Shooter, Battle Royale, and Puzzle games. Each category offers unique gaming experiences.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Platform Analysis</h3>
+                <p>Browse games by platform compatibility - from multi-platform releases to exclusive titles on PC, PlayStation, and Nintendo Switch.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Smart Search</h3>
+                <p>Instantly filter and discover games based on your preferences. Find free games, top-rated titles, or games from specific developers.</p>
+            </div>
+        </div>
+
+        <div class="feature-card" style="text-align: center; margin-top: 40px;">
+            <h3>Ready to Explore?</h3>
+            <p style="margin: 20px 0;">Use the navigation above to browse games by genre or platform. Each page offers interactive filtering and detailed game information cards.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="genre_html.html" class="filter-btn" style="text-decoration: none; font-size: 1.1em; padding: 15px 30px;">
+                    🎯 Browse by Genre
+                </a>
+                <a href="platform_html.html" class="filter-btn" style="text-decoration: none; font-size: 1.1em; padding: 15px 30px;">
+                    🎮 Browse by Platform
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-animation" id="particles"></div>
+    <script src="javascript.js"></script>
+</body>
+</html>

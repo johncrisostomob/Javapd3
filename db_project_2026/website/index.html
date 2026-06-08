@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- import the script.js file -->
+    <!-- We need to import JQUERY Library to make the api call-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+  </head>
+  
+  <!-- Call the int function when website loads -->
+  <body onload="init_customers()">
+    <div>
+      <!--  Header or Banner -->
+      <div id="header">
+        <h1> Celebrities </h1>
+      </div>
+      
+      <div class="container">
+        
+        <div class='panel'>
+          <br>
+          <label for="filterType">Filter by Career: </label>
+          <select id="filterType" onchange="filter_customers()">
+            <option value="">All Careers</option>
+          </select>
+        </div>
+        
+        <div id='centerpanel' class='container'>
+        </div>
+        
+        
+      </div>
+
+      <div id='foot'>
+        <h3> John Crisostomo Barkas </h3>
+      </div>
+
+    </div>
+    
+  </body>
+</html>

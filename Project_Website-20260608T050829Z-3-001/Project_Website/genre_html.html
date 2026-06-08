@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Database Explorer - Browse by Genre</title>
+    <link rel="stylesheet" href="styles_css.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎮 GameDB Explorer</div>
+            <div class="nav-links">
+                <a href="index_html.html" class="nav-link active">Home</a>
+                <a href="genre_html.html" class="nav-link">Browse by Genre</a>
+                <a href="platform_html.html" class="nav-link">Browse by Platform</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Genre Page Content -->
+    <div class="page">
+        <h1 style="text-align: center; margin-bottom: 30px; font-size: 2.5em;">Browse Games by Genre</h1>
+        
+        <div class="filter-container">
+            <h3 style="text-align: center; margin-bottom: 20px; color: #00d4aa;">Filter by Genre</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterByGenre('all')">All Games</button>
+                <button class="filter-btn" onclick="filterByGenre('RPG')">🗡️ RPG</button>
+                <button class="filter-btn" onclick="filterByGenre('Shooter')">🔫 Shooter</button>
+                <button class="filter-btn" onclick="filterByGenre('Battle Royale')">⚔️ Battle Royale</button>
+                <button class="filter-btn" onclick="filterByGenre('Puzzle')">🧩 Puzzle</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Loading games database...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="cards-container" class="cards-container"></div>
+    </div>
+
+    <div class="bg-animation" id="particles"></div>
+    <script src="javascript.js"></script>
+</body>
+</html>
