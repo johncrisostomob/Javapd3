@@ -38,7 +38,7 @@ class Main {
 
     String sql = "SELECT * FROM Celebrities";
     
-   // Add your  code here
+  // connects the 3 tables together and selects the name, age, net worth, career (info being pulled from database)
     sql = "SELECT Celebrities.name, Celebrities.age, Celebrities.netWorth, Careers.career, Gender.gender"
     + " FROM Celebrities"
     + " INNER JOIN Careers ON Celebrities.career_id = Careers.career_id"

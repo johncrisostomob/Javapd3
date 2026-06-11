@@ -20,12 +20,13 @@
         <!-- Filter panel – buttons written directly in HTML -->
         <div class="panel">
           <label>Filter by Career:</label>
+          <!-- filter buttons -->
           <div id="filterBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')">Show All</button>
-            <button class="btn" onclick="filterSelection('acting')">Acting</button>
-            <button class="btn" onclick="filterSelection('modeling')">Modeling</button>
-            <button class="btn" onclick="filterSelection('singing')">Singing</button>
-            <button class="btn" onclick="filterSelection('social-media')">Social Media</button>
+            <button class="btn active" onclick="filterSelection(this, 'all')">Show All</button>
+            <button class="btn" onclick="filterSelection(this, 'acting')">Acting</button>
+            <button class="btn" onclick="filterSelection(this, 'modeling')">Modeling</button>
+            <button class="btn" onclick="filterSelection(this, 'singing')">Singing</button>
+            <button class="btn" onclick="filterSelection(this, 'social-media')">Social Media</button>
           </div>
         </div>
 
